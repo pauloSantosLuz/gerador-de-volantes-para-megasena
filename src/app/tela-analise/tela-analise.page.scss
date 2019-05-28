@@ -1,0 +1,24 @@
+ion-content {
+	 div {
+	   width: 100%;
+	   display: flex;
+	   justify-content: center;
+	   align-items: flex-end;
+	   padding: 10px;
+	   flex-direction: row;
+	}
+	.resultado {
+	   display: flex;
+	   justify-content: flex-start;
+	   padding-left: 20px;
+
+	}
+	h1 {
+		font-size: 30px;
+		text-align: center;
+		text-decoration: underline;
+	}
+	h2 {
+		font-size: 20px;
+	}
+}

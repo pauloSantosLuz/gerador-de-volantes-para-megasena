@@ -1,0 +1,17 @@
+ion-content {
+	 div {
+	   height: 85%;
+	   width: 100%;
+	   display: flex;
+	   justify-content: center;
+	   align-items: flex-end;
+	   padding: 10px;
+	   flex-direction: row;
+	}
+
+	h1 {
+		font-size: 30px;
+		text-align: center;
+		text-decoration: underline;
+	}
+}

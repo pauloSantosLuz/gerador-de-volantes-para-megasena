@@ -1,0 +1,19 @@
+ion-content {
+	 div {
+	   height: 100%;
+	   width: 100%;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	   padding: 10px;
+	   flex-direction: column;
+	}
+
+	h1 {
+		font-size: 40px;
+		text-align: center;
+	}
+	ion-button {
+		width:100%;
+	}
+}
