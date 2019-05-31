@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JogoControllerService } from '../jogo-controller.service';
 
 @Component({
   selector: 'app-novo-jogo',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoJogoPage implements OnInit {
 
-  constructor() { }
+  constructor(private jogoControllerService:JogoControllerService) { }
 
   ngOnInit() {
+  }
+
+  public onAddNovoJogo(nomeJogo:string, qtdAposta:number)
+  {
+    this.jogoControllerService.metaDataNovoJogo(nomeJogo,qtdAposta);
   }
 
 }

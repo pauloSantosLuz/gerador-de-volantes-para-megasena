@@ -8,12 +8,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NovoJogoPageModule } from './novo-jogo/novo-jogo.module';
+import { TelaInformacaoApostaPageModule } from './tela-informacao-aposta/tela-informacao-aposta.module';
+import { JogoControllerService } from './jogo-controller.service';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    TelaInformacaoApostaPageModule,
+    NovoJogoPageModule,
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule
+    ],
   providers: [
+    JogoControllerService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
