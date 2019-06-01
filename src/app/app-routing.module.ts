@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'tela-jogo-importado', loadChildren: './tela-jogo-importado/tela-jogo-importado.module#TelaJogoImportadoPageModule' },
   { path: 'pre-analise-sorteio', loadChildren: './pre-analise-sorteio/pre-analise-sorteio.module#PreAnaliseSorteioPageModule' },
   { path: 'tela-analise', loadChildren: './tela-analise/tela-analise.module#TelaAnalisePageModule' },
+  { path: 'tela-geracao-randomica-aposta', loadChildren: './tela-geracao-randomica-aposta/tela-geracao-randomica-aposta.module#TelaGeracaoRandomicaApostaPageModule' },
 ];
 
 @NgModule({

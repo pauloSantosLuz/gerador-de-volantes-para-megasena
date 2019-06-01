@@ -1,7 +1,8 @@
 h1 {
 	font-size: 30px;
 	text-align: center;
-	text-decoration: none;
+    text-decoration: none;
+    margin-bottom: 0%;
 }
 h2 {
 	font-size: 15px;
@@ -26,20 +27,17 @@ h2 {
 	align-content: center;
 	justify-content: center;
 }
-.botoesVerticais {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 120px;
-}
-
 .botoesHorizontais {
-//	border-style: solid;
-	padding-top: 20%;
+	padding-top: 2%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
+}
+
+.toggle {
+	display: flex;
+    flex-direction: column;
 }
 
 .nome {
