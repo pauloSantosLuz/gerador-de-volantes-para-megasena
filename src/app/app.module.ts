@@ -11,11 +11,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { NovoJogoPageModule } from './novo-jogo/novo-jogo.module';
 import { TelaInformacaoApostaPageModule } from './tela-informacao-aposta/tela-informacao-aposta.module';
 import { JogoControllerService } from './jogo-controller.service';
+import { ApostaControllerService } from './aposta-controller.service';
+import { TelaCadastroApostaPageModule } from './tela-cadastro-aposta/tela-cadastro-aposta.module';
+import { TelaApostaCriadaPageModule } from './tela-aposta-criada/tela-aposta-criada.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    TelaApostaCriadaPageModule,
+    TelaCadastroApostaPageModule,
     TelaInformacaoApostaPageModule,
     NovoJogoPageModule,
     BrowserModule,

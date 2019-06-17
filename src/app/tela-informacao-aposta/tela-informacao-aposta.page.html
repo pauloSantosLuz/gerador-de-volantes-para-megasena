@@ -1,24 +1,23 @@
 <ion-content>
-	<h1>Aposta:</h1>
+	<h1>Aposta {{indexApostaPagina}}:</h1>
 	
 	<label>Quantidade de dezenas:</label>
-    <ion-range pin = "true">
+    <ion-range #numeroDezenas pin = "true" min = 6 max= 15 value = 6>
     </ion-range>
 
-    <p style="text-align: center;">Como o aplicativo deve receber as dezenas?<p>
-    <div class="toggle">
+    <p style="text-align: center;"><b>Como o aplicativo deve receber as dezenas?</b><p>
+    <ion-radio-group class="toggle">
     	<ion-item lines = "none">
-		   	<ion-toggle></ion-toggle>   		
+		   	<ion-radio  #geracaoManual value = "geracaoManual" (ionSelect) = "onCheck(geracaoManual.value)" checked = "true" ></ion-radio>   		
 	    	<ion-label>Gerar dezenas manualmente</ion-label>
     	</ion-item>
     	<ion-item lines = "none">
-		   	<ion-toggle></ion-toggle>   		
+		   	<ion-radio  #geracaoAleatoria value = "geracaoAleatoria" (ionSelect) = "onCheck(geracaoAleatoria.value)"></ion-radio>   		
 	    	<ion-label>Gerar dezenas aleatórias</ion-label>
     	</ion-item>
-    </div>
+    </ion-radio-group>
     <div class="botoes">
-    	<ion-button href="/tela-geracao-randomica-aposta">ENTRAR COM APOSTA</ion-button>
-    	<ion-button  color="secondary">APOSTA ANTERIOR</ion-button>
+    	<ion-button (click) = "apostaMetadata(geracaoAleatoria.checked, numeroDezenas.value)" >ENTRAR COM APOSTA</ion-button>
+    	<ion-button #botaoApostaAnterior color="secondary" (click) = "apostaAnterior()">APOSTA ANTERIOR</ion-button>
     </div>
-
 </ion-content>

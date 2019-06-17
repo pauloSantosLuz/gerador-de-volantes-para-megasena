@@ -1,16 +1,16 @@
 <ion-content>
 	<h1>Aposta n</h1>
 
-  <div class="toggle">
+  <ion-radio-group class="toggle">
     <ion-item lines = "none">
-       <ion-toggle ></ion-toggle>   		
+       <ion-radio checked = true></ion-radio>   		
       <ion-label>Incluir dezenas da geração</ion-label>
     </ion-item>
     <ion-item lines = "none">
-       <ion-toggle></ion-toggle>   		
+       <ion-radio></ion-radio>   		
       <ion-label>Excluir dezenas da geração</ion-label>
     </ion-item>
-  </div>
+  </ion-radio-group>
 
 	<div id="dezena">
 		<div class="linha">
@@ -97,6 +97,6 @@
 
 	<div class="botoesHorizontais">
 			<ion-button style="margin-right: 1%; width: 30%; font-size: 15px;">VOLTAR</ion-button>
-			<ion-button style="width: 50%; font-size: 20px;" href = "/tela-aposta-criada">PROXIMA</ion-button>
+			<ion-button style="width: 50%; font-size: 20px;" routerLink= "/tela-aposta-criada">PROXIMA</ion-button>
 	</div>
 </ion-content>

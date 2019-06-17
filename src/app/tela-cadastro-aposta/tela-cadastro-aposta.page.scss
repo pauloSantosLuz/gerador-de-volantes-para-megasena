@@ -7,24 +7,32 @@ h2 {
 	font-size: 15px;
 	text-align: center;
 	text-decoration: none;
-	padding-bottom: 20px;
+	padding-bottom: 2%;
 	color: red;
 	margin: 0;
 }
 .botaoRedondo {
 	border-radius: 40%;
-	padding: 2% 3% 2% 3%;
-	margin: 1% 1.5% 1% 1.5%; 
+	padding: 4% 4% 3.5% 4%;
+	margin: 1% 1.0% 1% 1.0%;
+	font-weight: bold;
+	background-color : lightgray; 
 }
 .dezena {
 	display: flex;
 	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	border-style: solid;
 }
 .linha {
+	margin-left: 5%;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	align-content: center;
 	justify-content: center;
+	width: 90%;
 }
 .botoesVerticais {
 	display: flex;
@@ -35,11 +43,12 @@ h2 {
 
 .botoesHorizontais {
 //	border-style: solid;
-	padding-top: 20%;
+	padding-top: 5%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-end;
+	margin-bottom: 0%;
 }
 
 .nome {

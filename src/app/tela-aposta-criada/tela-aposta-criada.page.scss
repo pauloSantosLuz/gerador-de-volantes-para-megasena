@@ -1,17 +1,44 @@
 ion-content {
-	 div {
-	   height: 85%;
-	   width: 100%;
-	   display: flex;
-	   justify-content: center;
-	   align-items: flex-end;
-	   padding: 10px;
-	   flex-direction: row;
-	}
 
 	h1 {
 		font-size: 30px;
 		text-align: center;
 		text-decoration: underline;
 	}
+	.aposta {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+		border-style: solid;
+	}
+	.nomeAposta {
+		margin-left: 5%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
+		width: 90%;
+	}
+	.botaoRedondo {
+		border-radius: 40%;
+		padding: 4% 4% 3.5% 4%;
+		margin: 1% 1.0% 1% 1.0%;
+		font-weight: bold;
+		background-color : lightgray; 
+	}
+		
+}
+ion-footer {
+	div {
+		//height: 85%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		padding: 10px;
+		flex-direction: row;
+	 }
+ 
 }

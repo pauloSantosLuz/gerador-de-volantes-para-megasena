@@ -1,92 +1,15 @@
 <ion-content>
-	<h1>Aposta n</h1>
-	<h2>Falta n dezenas</h2>
+	<h1>Aposta {{indexApostaPagina}}</h1>
+	<h2>Falta {{dezenasRestantes}} dezenas</h2>
 
 	<div id="dezena">
 		<div class="linha">
-			<button class="botaoRedondo"><b>01</b></button>
-			<button class="botaoRedondo"><b>02</b></button>
-			<button class="botaoRedondo"><b>03</b></button>
-			<button class="botaoRedondo"><b>04</b></button>
-			<button class="botaoRedondo"><b>05</b></button>
-			<button class="botaoRedondo"><b>06</b></button>
+			<button class="botaoRedondo" *ngFor = "let dezenas of possiveisDezenas"  [value]="dezenas" [id] = "dezenas" (click) = "botao($event)">{{dezenas}}</button>
 		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>07</b></button>
-			<button class="botaoRedondo"><b>08</b></button>
-			<button class="botaoRedondo"><b>09</b></button>
-			<button class="botaoRedondo"><b>10</b></button>
-			<button class="botaoRedondo"><b>11</b></button>
-			<button class="botaoRedondo"><b>12</b></button>
-			</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>13</b></button>
-			<button class="botaoRedondo"><b>14</b></button>
-			<button class="botaoRedondo"><b>15</b></button>
-			<button class="botaoRedondo"><b>16</b></button>
-			<button class="botaoRedondo"><b>17</b></button>
-			<button class="botaoRedondo"><b>18</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>19</b></button>
-			<button class="botaoRedondo"><b>20</b></button>
-			<button class="botaoRedondo"><b>21</b></button>
-			<button class="botaoRedondo"><b>22</b></button>
-			<button class="botaoRedondo"><b>23</b></button>
-			<button class="botaoRedondo"><b>24</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>25</b></button>
-			<button class="botaoRedondo"><b>26</b></button>
-			<button class="botaoRedondo"><b>27</b></button>
-			<button class="botaoRedondo"><b>28</b></button>
-			<button class="botaoRedondo"><b>29</b></button>
-			<button class="botaoRedondo"><b>30</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>31</b></button>
-			<button class="botaoRedondo"><b>32</b></button>
-			<button class="botaoRedondo"><b>33</b></button>
-			<button class="botaoRedondo"><b>34</b></button>
-			<button class="botaoRedondo"><b>35</b></button>
-			<button class="botaoRedondo"><b>36</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>37</b></button>
-			<button class="botaoRedondo"><b>38</b></button>
-			<button class="botaoRedondo"><b>39</b></button>
-			<button class="botaoRedondo"><b>40</b></button>
-			<button class="botaoRedondo"><b>41</b></button>
-			<button class="botaoRedondo"><b>42</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>43</b></button>
-			<button class="botaoRedondo"><b>44</b></button>
-			<button class="botaoRedondo"><b>45</b></button>
-			<button class="botaoRedondo"><b>46</b></button>
-			<button class="botaoRedondo"><b>47</b></button>
-			<button class="botaoRedondo"><b>48</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>49</b></button>
-			<button class="botaoRedondo"><b>50</b></button>
-			<button class="botaoRedondo"><b>51</b></button>
-			<button class="botaoRedondo"><b>52</b></button>
-			<button class="botaoRedondo"><b>53</b></button>
-			<button class="botaoRedondo"><b>54</b></button>
-		</div>
-		<div class="linha">
-			<button class="botaoRedondo"><b>55</b></button>
-			<button class="botaoRedondo"><b>56</b></button>
-			<button class="botaoRedondo"><b>57</b></button>
-			<button class="botaoRedondo"><b>58</b></button>
-			<button class="botaoRedondo"><b>59</b></button>
-			<button class="botaoRedondo"><b>60</b></button>
-		</div>																	
 	</div>
 
 	<div class="botoesHorizontais">
-			<ion-button style="margin-right: 1%; width: 30%; font-size: 15px;">VOLTAR</ion-button>
-			<ion-button style="width: 50%; font-size: 20px;" href = "/tela-aposta-criada">PROXIMA</ion-button>
+			<ion-button style="margin-bottom: 5%; margin-right: 1%; width: 30%; font-size: 80%;" routerLink = "/home">VOLTAR</ion-button>
+			<ion-button style="margin-bottom: 5%; width: 50%; font-size: 100%;" (click) = "avanca()" >PROXIMA</ion-button>
 	</div>
 </ion-content>

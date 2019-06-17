@@ -6,6 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TelaApostaCriadaPage } from './tela-aposta-criada.page';
+import { JogoControllerService } from '../jogo-controller.service';
+import { File } from '@ionic-native/file/ngx';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
 
 const routes: Routes = [
   {
@@ -20,6 +23,11 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+    File,
+    FileChooser
+//    JogoControllerService
   ],
   declarations: [TelaApostaCriadaPage]
 })

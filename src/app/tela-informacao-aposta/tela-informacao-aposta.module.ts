@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TelaInformacaoApostaPage } from './tela-informacao-aposta.page';
+import { JogoControllerService } from '../jogo-controller.service';
+import { ApostaControllerService } from '../aposta-controller.service';
 
 const routes: Routes = [
   {
@@ -20,6 +22,13 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
+  ],
+  exports: [
+    TelaInformacaoApostaPage
+  ],
+  providers: [
+    ApostaControllerService
+
   ],
   declarations: [TelaInformacaoApostaPage]
 })

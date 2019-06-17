@@ -21,6 +21,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
+  exports: [
+  ],
   declarations: [TelaCadastroApostaPage]
 })
 export class TelaCadastroApostaPageModule {}

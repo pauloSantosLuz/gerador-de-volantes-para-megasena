@@ -11,12 +11,12 @@
 		<ion-icon name="pricetag"></ion-icon>	
 	</div>
 	<label>Quantidade de apostas:</label>
-	    <ion-range #qtdAposta pin = "true">
+	    <ion-range #qtdAposta pin = "true" value = 1>
 	    </ion-range>
   </div>
   <div class="botoes">
-  	<ion-button color ="danger" style="font-size:15px; height: 50px; " href="/menu">VOLTAR</ion-button>
-  	<ion-button style="font-size: 15px; height: 60px; padding-right: 10px" href="/tela-informacao-aposta" (click)="onAddNovoJogo(nomeJogo.value, qtdAposta.value)">CONTINUAR</ion-button>
+  	<ion-button color ="danger" style="font-size:15px; height: 50px; " routerLink="/menu">VOLTAR</ion-button>
+  	<ion-button style="font-size: 15px; height: 60px; padding-right: 10px" routerLink="/tela-informacao-aposta" (click)="onAddNovoJogo(nomeJogo.value, qtdAposta.value)">CONTINUAR</ion-button>
   </div>
 
 </div>
