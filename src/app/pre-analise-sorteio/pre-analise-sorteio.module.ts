@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PreAnaliseSorteioPage } from './pre-analise-sorteio.page';
+import { JogoControllerService } from '../jogo-controller.service';
 
 const routes: Routes = [
   {
@@ -20,6 +21,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
+  ],
+  providers: [
+//    JogoControllerService
   ],
   declarations: [PreAnaliseSorteioPage]
 })

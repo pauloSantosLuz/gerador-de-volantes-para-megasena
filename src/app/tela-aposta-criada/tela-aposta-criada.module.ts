@@ -27,7 +27,7 @@ const routes: Routes = [
   providers: [
     File,
     FileChooser
-//    JogoControllerService
+    //JogoControllerService
   ],
   declarations: [TelaApostaCriadaPage]
 })

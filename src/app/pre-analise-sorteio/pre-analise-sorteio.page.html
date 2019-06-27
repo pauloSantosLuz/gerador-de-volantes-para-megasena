@@ -6,7 +6,7 @@
 	<label style="margin-bottom: 10px;">Nome do jogo:</label>
 	<div class="nome">
 	    <label class="item-input-wrapper">
-    	  <input type="text" placeholder="Nome do jogo">
+    	  <input type="text" value = "{{this.jogoControllerService.nomeJogo}}" placeholder="Nome do jogo" id = "inputNomeJogo">
     	</label>
 		<ion-icon name="pricetag"></ion-icon>	
 	</div>
@@ -15,14 +15,14 @@
 
 	<div class="nome">
 	    <label class="item-input-wrapper">
-    	  <input type="text" placeholder="Dezenas sorteadas">
+    	  <input type="text" placeholder="Dezenas sorteadas" #dezenasSorteadas>
     	</label>
 		<ion-icon name="checkmark-circle-outline"></ion-icon>
 	</div>
   </div>
 
   <div class="botoes">
-  	<ion-button style="font-size: 15px; height: 60px; padding-right: 10px; width: 80%;" routerLink="/tela-analise">ANALISAR</ion-button>
+  	<ion-button style="font-size: 15px; height: 60px; padding-right: 10px; width: 80%;" [routerLink]="[ '/tela-analise',{id:dezenasSorteadas.value}]">ANALISAR</ion-button>
    	<ion-button color ="danger" style="font-size:15px; height: 50px;width: 60%; " routerLink="/menu">VOLTAR</ion-button>
  </div>
 

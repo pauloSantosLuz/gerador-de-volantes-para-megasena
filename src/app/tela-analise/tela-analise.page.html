@@ -1,18 +1,61 @@
 <ion-content>
 	<h1>Análise</h1>
-	<div class="resultado">
-		<h2>Sena:</h2>
+	<div style="margin-left: 0%; margin-bottom: 2%;" class="nomeAposta">
+		<h2 style="width:100%; margin-bottom: 2%;"><b>Nome do jogo:</b> <u style="margin-left: 5%;">{{this.jogoControllerService.nomeJogo}}</u>
+		</h2>
 	</div>
-	<br/>
-	<div class="resultado">
-		<h2>Quina:</h2>
-	</div>
-	<br/>
-	<div class="resultado">
-		<h2>Quadra:</h2>
-	</div>
-	<div>
-		<ion-button color = "success" style="width: 50%; font-size: 12px;" routerLink="/home">FINALIZAR</ion-button>
+	<h2 style="width:100%; margin-bottom: 2%;"><b>Aposta sorteada:</b></h2>
+	<div style="margin-left: 2%; margin-bottom: 2%;" class="nomeAposta">
+		<button style="background-color: gold; " class="botaoRedondo" *ngFor="let dezena of this.apostaSorteada"
+			[value]="dezena" [id]="dezena">{{dezena}}</button>
 	</div>
 
+	<div *ngIf = "this.sena.length == 0 && this.quinas.length == 0 && this.quadras.length == 0">
+		<div id="semGanhadores"> <u>Sem apostas vencedoras neste jogo</u> </div>
+	</div>
+
+	<div *ngIf = "this.sena.length != 0">
+		<h2 style="padding-top: 2%;"><b>Sena:</b></h2>
+		<div id="aposta">
+			<div style="padding-top: 0%; margin-top: 1%;" class="nomeAposta">
+				<h2 class="index" style="width:100%">Aposta {{this.sena.indexAposta + 1}}</h2>
+				<button class="botaoRedondo" *ngFor="let dezena of this.sena.dezenas" [value]="dezena"
+					[id]="dezena">{{dezena}}</button>
+			</div>
+		</div>
+	</div>
+
+	<div *ngIf="this.quinas.length != 0">
+		<h2 style="padding-top: 2%;"><b>Quinas:</b></h2>
+		<div *ngFor="let quina of this.quinas; let i = index">
+			<div id="aposta">
+				<div style="padding-top: 0%; margin-top: 1%;" class="nomeAposta">
+					<h2 class="index" style="width:100%">Aposta {{this.quinas[i].indexAposta + 1}}</h2>
+					<button class="botaoRedondo" *ngFor="let dezena of this.quinas[i].dezenas" [value]="dezena"
+						[id]="dezena">{{dezena}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div *ngIf="this.quadras.length != 0">
+		<h2 style="padding-top: 2%;"><b>Quadras:</b></h2>
+		<div *ngFor="let quadra of this.quadras; let i = index">
+			<div id="aposta">
+				<div style="padding-top: 0%; margin-top: 1%;" class="nomeAposta">
+					<h2 class="index" style="width:100%">Aposta {{this.quadras[i].indexAposta + 1}}</h2>
+					<button class="botaoRedondo" *ngFor="let dezena of this.quadras[i].dezenas" [value]="dezena"
+						[id]="dezena">{{dezena}}</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 </ion-content>
+
+<ion-footer style="background-color: white;">
+	<div class="botaoFinalizar">
+		<ion-button color="success" style="width: 50%; font-size: 12px;" routerLink="/home">FINALIZAR</ion-button>
+	</div>
+			
+</ion-footer>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ApostaControllerService {
+  public indexAposta:string;
   public numDezenas:number;
   geracaoRandomica:boolean;
   dezenas: string[];

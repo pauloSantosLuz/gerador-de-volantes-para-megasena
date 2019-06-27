@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { JogoControllerService } from '../jogo-controller.service';
+import { DebugContext } from '@angular/core/src/view';
 
 @Component({
   selector: 'app-pre-analise-sorteio',
@@ -6,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pre-analise-sorteio.page.scss'],
 })
 export class PreAnaliseSorteioPage implements OnInit {
-
-  constructor() { }
+  constructor(private jogoControllerService:JogoControllerService) { }
 
   ngOnInit() {
   }
-
+  
 }

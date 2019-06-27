@@ -14,11 +14,15 @@ import { JogoControllerService } from './jogo-controller.service';
 import { ApostaControllerService } from './aposta-controller.service';
 import { TelaCadastroApostaPageModule } from './tela-cadastro-aposta/tela-cadastro-aposta.module';
 import { TelaApostaCriadaPageModule } from './tela-aposta-criada/tela-aposta-criada.module';
+import { PreAnaliseSorteioPageModule } from './pre-analise-sorteio/pre-analise-sorteio.module';
+import { TelaAnalisePageModule } from './tela-analise/tela-analise.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    TelaAnalisePageModule,
+    PreAnaliseSorteioPageModule,
     TelaApostaCriadaPageModule,
     TelaCadastroApostaPageModule,
     TelaInformacaoApostaPageModule,
