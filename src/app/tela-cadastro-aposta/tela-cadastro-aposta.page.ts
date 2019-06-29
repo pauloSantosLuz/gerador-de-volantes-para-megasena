@@ -25,25 +25,16 @@ export class TelaCadastroApostaPage implements OnInit {
   
   }
   ionViewDidEnter(){
-    let index;
+    let index = this.getIndex();
 
-    if(this.jogoControllerService.onEdit())
-      index = this.indexApostaPagina - 1;
-
-      for(let dezena of this.jogoControllerService.aposta[index].dezenas){
-      let element = document.getElementById(dezena);//style.backgroundColor = "green";
-      element.style.backgroundColor = "green";
+    for(let dezena of this.jogoControllerService.aposta[index].dezenas){
+     let element = document.getElementById(dezena);//style.backgroundColor = "green";
+     element.style.backgroundColor = "green";
     }
 
   }
   ionViewWillEnter(){
-    //debug para verificar se as apostas estão sendo adicionadas corretamente
-    let index;
-    if(this.jogoControllerService.onEdit())
-      index = this.indexApostaPagina - 1;
-    else
-      index = this.jogoControllerService.aposta.length - 1;
-
+    let index = this.getIndex();
 
     //alimenta a array que sera usada como referencia na view para criar os botoes de dezena
     for (var i = 1; i <= 60; i++) {
@@ -63,21 +54,13 @@ export class TelaCadastroApostaPage implements OnInit {
       }
 
   }
-  //atualiza index da aposta na saida da view
-  ionViewDidLeave(){
-    this.indexApostaPagina = this.jogoControllerService.indexAposta;
-  }
   //adiciona/remove as dezenas quando elas forem pressionadas na view
   public botao(event)
   {
     let botaoApertado : HTMLButtonElement;
     botaoApertado = event.target;
     
-    let index;
-    if(this.jogoControllerService.onEdit())
-      index = this.indexApostaPagina - 1;
-    else
-      index = this.jogoControllerService.aposta.length - 1;
+    let index = this.getIndex();
 
     if(botaoApertado.style.backgroundColor != "green"){
       if(this.dezenasRestantes > 0){
@@ -97,13 +80,8 @@ export class TelaCadastroApostaPage implements OnInit {
   }
 //metodo que recalcula quantas dezenas esta faltando pra completar a aposta
   public recalculaDezenasRestantes(){
-    let index;
-    if(this.jogoControllerService.onEdit())
-      index = this.indexApostaPagina - 1;
-    
-    else
-      index = this.jogoControllerService.aposta.length - 1;
-    
+    let index = this.getIndex();
+
     let numDezenas = this.jogoControllerService.aposta[index].numDezenas;
     let length = this.jogoControllerService.aposta[index].dezenas.length; 
     this.dezenasRestantes = numDezenas - length;
@@ -122,4 +100,18 @@ export class TelaCadastroApostaPage implements OnInit {
     else
       this.router.navigate(['/', 'tela-cadastro-aposta']);
   }
+
+  public getIndex():number{
+    if(this.jogoControllerService.onEdit())
+      return this.indexApostaPagina - 1; 
+    else
+      return this.jogoControllerService.aposta.length - 1;
+  }
+
+  public voltar(){
+    let index = this.getIndex();
+    this.jogoControllerService.aposta[index].dezenas.length = 0;
+    this.router.navigate(['/', 'tela-informacao-aposta']);
+  }
+    
 }

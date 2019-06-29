@@ -16,11 +16,13 @@ import { TelaCadastroApostaPageModule } from './tela-cadastro-aposta/tela-cadast
 import { TelaApostaCriadaPageModule } from './tela-aposta-criada/tela-aposta-criada.module';
 import { PreAnaliseSorteioPageModule } from './pre-analise-sorteio/pre-analise-sorteio.module';
 import { TelaAnalisePageModule } from './tela-analise/tela-analise.module';
+import { TelaGeracaoRandomicaApostaPageModule } from './tela-geracao-randomica-aposta/tela-geracao-randomica-aposta.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    TelaGeracaoRandomicaApostaPageModule,
     TelaAnalisePageModule,
     PreAnaliseSorteioPageModule,
     TelaApostaCriadaPageModule,

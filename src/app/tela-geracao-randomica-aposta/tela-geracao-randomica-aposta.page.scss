@@ -14,18 +14,26 @@ h2 {
 }
 .botaoRedondo {
 	border-radius: 40%;
-	padding: 2% 3% 2% 3%;
-	margin: 1% 1.5% 1% 1.5%; 
+	padding: 2.5% 4% 2.5% 4%;
+	margin: 1% 1.0% 1% 1.0%;
+	font-weight: bold;
+	background-color : lightgray; 
 }
 .dezena {
 	display: flex;
 	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	border-style: solid;
 }
 .linha {
+	margin-left: 5%;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	align-content: center;
 	justify-content: center;
+	width: 90%;
 }
 .botoesHorizontais {
 	padding-top: 2%;

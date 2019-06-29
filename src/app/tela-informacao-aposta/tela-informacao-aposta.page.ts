@@ -26,6 +26,7 @@ export class TelaInformacaoApostaPage implements OnInit {
    
   }
   ionViewWillEnter(){
+    this.proximoUrl = "tela-cadastro-aposta";
     this.indexApostaPagina = this.jogoControllerService.indexAposta;
 
     //se esta na primeira aposta desativa o botao de voltar
@@ -85,16 +86,16 @@ export class TelaInformacaoApostaPage implements OnInit {
       console.log(this.jogoControllerService.aposta[index].numDezenas);
 
     //navega para tela de cadastro
-    this.router.navigate(['/', 'tela-cadastro-aposta']);
+    this.router.navigate(['/', this.proximoUrl]);
   }
 
   //evento onCheck dos radios
   public onCheck(esteRadio:string)
   {
     if(esteRadio == "geracaoManual")
-      this.proximoUrl = "/tela-cadastro-aposta";
+      this.proximoUrl = "tela-cadastro-aposta";
     if(esteRadio == "geracaoAleatoria")
-      this.proximoUrl = "/tela-geracao-randomica-aposta";
+      this.proximoUrl = "tela-geracao-randomica-aposta";
       
   }
   //navega para a aposta anterior
