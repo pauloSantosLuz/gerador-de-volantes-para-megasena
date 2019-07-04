@@ -163,6 +163,20 @@ public geraAposta(){
 }
 
 public avanca(){
+  let index = this.getIndex();
+
+  this.jogoControllerService.aposta[index].dezenas.sort();
+
+  if(this.existeApostaIgual()){
+    alert("Já  existe uma aposta com as mesmas dezenas, insira dezenas diferente!");
+    let index = this.getIndex();
+    for(let dezena of this.jogoControllerService.aposta[index].dezenas){
+      let element = document.getElementById(dezena);
+      element.style.backgroundColor = "green";
+    }
+    return;
+  }
+  
   if(this.dezenasRestantes == 0){
     this.jogoControllerService.indexAposta++;
 
@@ -177,9 +191,9 @@ public avanca(){
 }
 
 public voltar(){
-  let index = this.getIndex();
-  this.jogoControllerService.aposta[index].dezenas.length = 0;
-  this.router.navigate(['/', 'tela-informacao-aposta']);
+ // let index = this.getIndex();
+  //this.jogoControllerService.aposta[index].dezenas.length = 0;
+  this.router.navigate(['/', 'menu']);
 }
 
 public getIndex():number{
@@ -188,6 +202,43 @@ public getIndex():number{
   else
     return this.jogoControllerService.aposta.length - 1;
 }
+
+public existeApostaIgual():boolean{
+  let index = this.getIndex();
+  console.log(index);
+  let apostaIgual = false;
+
+  for(let i = 0; i < this.jogoControllerService.aposta.length; i++){
+    if(i == index)
+      continue;
+
+    let NumDezenasDiferente:boolean = this.jogoControllerService.aposta[i].numDezenas
+      != this.jogoControllerService.aposta[index].numDezenas;
+
+    if(NumDezenasDiferente)
+        continue;
+    
+    if(apostaIgual)
+      continue;
+  
+    for(let j = 0; j < this.jogoControllerService.aposta[i].dezenas.length; j++){
+      apostaIgual = true;
+      let dezenaDiferente:boolean = this.jogoControllerService.aposta[i].dezenas[j]
+        != this.jogoControllerService.aposta[index].dezenas[j];
+      console.log(dezenaDiferente);
+
+      if(dezenaDiferente)
+        apostaIgual = false;
+    }
+  }
+
+  if(this.jogoControllerService.aposta.length == 1)
+    apostaIgual = false;
+
+  
+  return apostaIgual;
+}
+
 
 }
 

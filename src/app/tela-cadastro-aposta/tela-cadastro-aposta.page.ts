@@ -88,6 +88,13 @@ export class TelaCadastroApostaPage implements OnInit {
   }
   //função acionada quando o botao de avançar é clicado
   public avanca(){
+    let index = this.getIndex();
+
+    this.jogoControllerService.aposta[index].dezenas.sort();
+    if(this.existeApostaIgual()){
+        alert("Já  existe uma aposta com as mesmas dezenas, insira dezenas diferente!");
+        return;
+    }
     if(this.dezenasRestantes == 0){
       this.jogoControllerService.indexAposta++;
 
@@ -113,5 +120,41 @@ export class TelaCadastroApostaPage implements OnInit {
     this.jogoControllerService.aposta[index].dezenas.length = 0;
     this.router.navigate(['/', 'tela-informacao-aposta']);
   }
+
+  public existeApostaIgual():boolean{
+    let index = this.getIndex();
+    console.log(index);
+    let apostaIgual = false;
+
+    for(let i = 0; i < this.jogoControllerService.aposta.length; i++){
+      if(i == index)
+        continue;
+
+      let NumDezenasDiferente:boolean = this.jogoControllerService.aposta[i].numDezenas
+        != this.jogoControllerService.aposta[index].numDezenas;
+
+      if(NumDezenasDiferente)
+          continue;
+      
+      if(apostaIgual)
+        continue;
     
+      for(let j = 0; j < this.jogoControllerService.aposta[i].dezenas.length; j++){
+        apostaIgual = true;
+        let dezenaDiferente:boolean = this.jogoControllerService.aposta[i].dezenas[j]
+          != this.jogoControllerService.aposta[index].dezenas[j];
+        console.log(dezenaDiferente);
+
+        if(dezenaDiferente)
+          apostaIgual = false;
+      }
+    }
+
+    if(this.jogoControllerService.aposta.length == 1)
+      apostaIgual = false;
+
+    
+    return apostaIgual;
+  }
+      
 }
