@@ -6,7 +6,7 @@
 	<label style="margin-bottom: 10px;">Nome do jogo:</label>
 	<div class="nome">
 	    <label class="item-input-wrapper">
-    	  <input type="text" placeholder="Nome do jogo" #nomeJogo>
+    	  <input type="text" placeholder="Nome do jogo" #nomeJogo required>
     	</label>
 		<ion-icon name="pricetag"></ion-icon>	
 	</div>
@@ -16,7 +16,7 @@
   </div>
   <div class="botoes">
   	<ion-button color ="danger" style="font-size:15px; height: 50px; " routerLink="/menu">VOLTAR</ion-button>
-  	<ion-button style="font-size: 15px; height: 60px; padding-right: 10px" routerLink="/tela-informacao-aposta" (click)="onAddNovoJogo(nomeJogo.value, qtdAposta.value)">CONTINUAR</ion-button>
+  	<ion-button style="font-size: 15px; height: 60px; padding-right: 10px" (click)="onAddNovoJogo(nomeJogo.value, qtdAposta.value)">CONTINUAR</ion-button>
   </div>
 
 </div>
