@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { PreAnaliseSorteioPage } from './pre-analise-sorteio.page';
 import { JogoControllerService } from '../jogo-controller.service';
+import { NgxMaskIonicModule } from 'ngx-mask-ionic';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    NgxMaskIonicModule,
     CommonModule,
     FormsModule,
     IonicModule,

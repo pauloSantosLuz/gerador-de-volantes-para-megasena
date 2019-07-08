@@ -37,13 +37,13 @@ export class TelaAnalisePage implements OnInit {
             contDezena++;
         }
       }
+
       if(contDezena == 6){
 //        console.log("Aeee milionariooo");
         let i = this.jogoControllerService.aposta.indexOf(aposta);
         aposta.indexAposta = i;
         this.sena = aposta;
         this.jogoControllerService.aposta.slice(i,1);
-
       }
       if(contDezena == 5){
         let i = this.jogoControllerService.aposta.indexOf(aposta);

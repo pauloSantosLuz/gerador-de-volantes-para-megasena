@@ -34,7 +34,11 @@ export class TelaApostaCriadaPage implements OnInit {
   }
 
   public alterarAposta(){
-//    this.jogoControllerService.indexAposta = 1;
+    this.jogoControllerService.indexAposta = 1;
+    this.router.navigate(['/', 'tela-informacao-aposta']);
+  }
+  public sorteio(){
     this.router.navigate(['/', 'pre-analise-sorteio']);
   }
+
 }

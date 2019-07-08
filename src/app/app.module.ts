@@ -17,11 +17,14 @@ import { TelaApostaCriadaPageModule } from './tela-aposta-criada/tela-aposta-cri
 import { PreAnaliseSorteioPageModule } from './pre-analise-sorteio/pre-analise-sorteio.module';
 import { TelaAnalisePageModule } from './tela-analise/tela-analise.module';
 import { TelaGeracaoRandomicaApostaPageModule } from './tela-geracao-randomica-aposta/tela-geracao-randomica-aposta.module';
+import { NgxMaskIonicModule } from 'ngx-mask-ionic';
+import { TelaJogoImportadoPageModule } from './tela-jogo-importado/tela-jogo-importado.module';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    TelaJogoImportadoPageModule,
     TelaGeracaoRandomicaApostaPageModule,
     TelaAnalisePageModule,
     PreAnaliseSorteioPageModule,
@@ -31,8 +34,9 @@ import { TelaGeracaoRandomicaApostaPageModule } from './tela-geracao-randomica-a
     NovoJogoPageModule,
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
-    ],
+    AppRoutingModule,
+    NgxMaskIonicModule.forRoot()
+  ],
   providers: [
     JogoControllerService,
     StatusBar,

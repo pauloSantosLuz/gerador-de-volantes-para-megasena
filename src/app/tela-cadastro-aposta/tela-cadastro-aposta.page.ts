@@ -22,11 +22,9 @@ export class TelaCadastroApostaPage implements OnInit {
 }
 
   ngOnInit() {
-  
   }
   ionViewDidEnter(){
     let index = this.getIndex();
-
     for(let dezena of this.jogoControllerService.aposta[index].dezenas){
      let element = document.getElementById(dezena);//style.backgroundColor = "green";
      element.style.backgroundColor = "green";
