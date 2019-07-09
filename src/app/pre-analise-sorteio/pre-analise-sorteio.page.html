@@ -6,7 +6,7 @@
 	<label style="margin-bottom: 10px;">Nome do jogo:</label>
 	<div class="nome">
 	    <label class="item-input-wrapper">
-    	  <input type="text" value = "{{this.jogoControllerService.nomeJogo}}" placeholder="Nome do jogo" id = "inputNomeJogo">
+    	  <input type="text" value = "{{this.jogoControllerService.nomeJogo}}" placeholder="Nome do jogo" id = "inputNomeJogo" (click) = "escolheJogo()">
     	</label>
 		<ion-icon name="pricetag"></ion-icon>	
 	</div>
