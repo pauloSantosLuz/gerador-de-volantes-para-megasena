@@ -8,30 +8,25 @@ AplicativoGeracaoApostaMegasena
 Requerimentos:
 --------------------
 
-Ionic:
+**Ionic:**
 
-Ionic CLI		      : 5.0.3
-
-Ionic Framework		      : @ionic/angular 4.6.0
-
-@angular-devkit/build-angular : 0.13.8
-
-@angular-devkit/schematics    : 7.2.4
-
-@angular/cli                  : 7.3.8
-
+Ionic CLI		      : 5.0.3  
+Ionic Framework		      : @ionic/angular 4.6.0  
+@angular-devkit/build-angular : 0.13.8  
+@angular-devkit/schematics    : 7.2.4  
+@angular/cli                  : 7.3.8  
 @ionic/angular-toolkit        : 1.4.1
 
-Cordova:
+**Cordova:**
 
-Cordova CLI       : 9.0.0
-Cordova Platforms : android 8.0.0
+Cordova CLI       : 9.0.0  
+Cordova Platforms : android 8.0.0  
 
-Sistema
+**Sistema**
 
-NodeJS : v10.15.3 
-npm    : 6.4.1
-OS     : Windows 10
+NodeJS : v10.15.3  
+npm    : 6.4.1  
+OS     : Windows 10  
 
 Configurando o ambiente de trabalho:
 ------------
