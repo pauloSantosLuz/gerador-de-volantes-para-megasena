@@ -1,12 +1,15 @@
-Aplicativo de geração de aposta para para sorteios da megasena
 
-Aplicativo criado por Paulo Henrique Dos Santos Luz, na disciplina de Desenvolvimento de Aplicativos Móveis na UTFPR comm a orientação do professor Everton Coimbra de Araújo.
+AplicativoGeracaoApostaMegasena
+===========
 
-Aplicação construída utilizando o ionic/angular Framework junto com Cordova, que utiliza a linguagem typescript. Para execução da aplicação utilizei o meu próprio dispositivo android, mas pode-se utilizar tambem um emulador android. Logo abaixo está listada as ferramentas e suas versões que devem estar presente em sua plataforma de desenvolvimento para a execução da aplicação.
+  Aplicativo criado para apresentaÃ§Ã£o da disciplina de Desenvolvimento de Aplicativos MÃ³veis na UTFPR com a orientaÃ§Ã£o do professor Everton Coimbra de AraÃºjo.
 
-Requerimentos:
+
+#Requerimentos:
+--------------------
 
 Ionic:
+--------------------
 
 Ionic CLI		      : 5.0.3
 Ionic Framework		      : @ionic/angular 4.6.0
@@ -16,18 +19,33 @@ Ionic Framework		      : @ionic/angular 4.6.0
 @ionic/angular-toolkit        : 1.4.1
 
 Cordova:
+--------------------
 
 Cordova CLI       : 9.0.0
 Cordova Platforms : android 8.0.0
 
 Sistema
+--------------------
 
 NodeJS : v10.15.3 
 npm    : 6.4.1
 OS     : Windows 10
 
-Tanto para preparar o ambiente, quanto ao longo do desenvolvimento utilizei a documentação do ionic que pode ser acessada por esse link: 
+Configurando o ambiente de trabalho:
+------------
 
-https://ionicframework.com/docs
+VocÃª pode configurar o projeto digitando os seguintes comandos:
 
-Contato: paulohenrique.luz@hotmail.com
+    $ git clone https://github.com/pauloSantosLuz/AplicativoGeracaoApostaMegasena
+    $ cd AplicativoGeracaoApostaMegasena
+    $ npm install
+    
+Executando a aplicaÃ§Ã£o
+--------------------
+
+Com o prompt command aberto na pasta do projeto e o ambiente virtual jÃ¡ ativado vocÃª pode iniciar o servidor com o comando:
+
+
+    (venv) $ ionic serve
+
+e digitar http://127.0.0.1:8000/ em seu navegador.
