@@ -1,5 +1,5 @@
 
-AplicativoGeracaoApostaMegasena
+GeracaoApostaMegasena
 ===========
 
   Aplicativo criado para apresentação da disciplina de Desenvolvimento de Aplicativos Móveis na UTFPR com a orientação do professor Everton Coimbra de Araújo.
@@ -43,6 +43,6 @@ Executando a aplicação
 Com o prompt command aberto na pasta do projeto e o ambiente virtual já ativado você pode iniciar o servidor com o comando:
 
 
-    (venv) $ ionic serve
+    $ ionic serve
 
 e digitar http://127.0.0.1:8000/ em seu navegador.
