@@ -1,5 +1,5 @@
 
-GeracaoApostaMegasena
+gerador-de-volantes-para-megasena
 ===========
 
   Aplicativo criado para apresentação da disciplina de Desenvolvimento de Aplicativos Móveis na UTFPR com a orientação do professor Everton Coimbra de Araújo.
